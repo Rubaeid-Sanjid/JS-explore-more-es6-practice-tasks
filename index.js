@@ -51,6 +51,14 @@ const people = [
     {name: 'Rina', age: 15},
     {name: 'Suchorita', age: 22}
 ];
-
+// Using array reduce method
 const result = people.map(n => n.age).reduce((prev, curr) => prev + curr, 0);
 console.log(result);
+
+// Using for loop
+let totalAge = 0;
+for (let index = 0; index < people.length; index++) {
+    const element = people[index];
+    totalAge += element.age;
+}
+console.log(totalAge);
