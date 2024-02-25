@@ -28,3 +28,16 @@ console.log(divisibleByTen);
 // using find method
 const divisibleByTen2 = numbers.find(n => n % 10===0)
 console.log(divisibleByTen2);
+
+//Task 3: 
+// You have an array of objects:
+// Display the instructor names that has the position senior using filter.
+const instructor = [
+    {name: 'Nodi', age: 28, position: 'Senior'},
+    {name: 'Akil', age: 26, position: 'Junior'},
+    {name: 'Shobuj', age: 30, position: 'Senior'}
+]
+
+const seniorInstructor = instructor.filter(n => n.position === 'Senior');
+const seniorInstructorName = seniorInstructor.map(n => n.name);
+console.log(seniorInstructorName);
