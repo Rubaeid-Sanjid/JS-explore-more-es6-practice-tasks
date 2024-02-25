@@ -1,4 +1,4 @@
-//Task 1:
+// Task 1:
 // You have an odd array. now convert this array into an even array.(using for loop & map method)
 
 // Using for loop
@@ -16,7 +16,7 @@ const oddNumbers2 = [3, 1, 11, 13, 9];
 const evenNumbers = oddNumbers2.map(n => n+1);
 console.log(evenNumbers);
 
-//Task 2:
+// Task 2:
 // You are given an array say: [33, 50, 79, 78, 90, 101, 30]. Now return/get all the elements
 // which are divisible by 10 using array.filter() method. Then again do the same task using array.find() method.
 
@@ -29,15 +29,28 @@ console.log(divisibleByTen);
 const divisibleByTen2 = numbers.find(n => n % 10===0)
 console.log(divisibleByTen2);
 
-//Task 3: 
+// Task 3: 
 // You have an array of objects:
 // Display the instructor names that has the position senior using filter.
 const instructor = [
     {name: 'Nodi', age: 28, position: 'Senior'},
     {name: 'Akil', age: 26, position: 'Junior'},
     {name: 'Shobuj', age: 30, position: 'Senior'}
-]
+];
 
 const seniorInstructor = instructor.filter(n => n.position === 'Senior');
 const seniorInstructorName = seniorInstructor.map(n => n.name);
 console.log(seniorInstructorName);
+
+// Task 4:
+// You have three objects as array element. Can you find out the total ages from here ? use for loop and array.reduce() method.
+// (20 + 15 + 22) the output will be 57.
+
+const people = [
+    {name: 'Meena', age: 20},
+    {name: 'Rina', age: 15},
+    {name: 'Suchorita', age: 22}
+];
+
+const result = people.map(n => n.age).reduce((prev, curr) => prev + curr, 0);
+console.log(result);
